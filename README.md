@@ -3,8 +3,8 @@
 A portfolio demo built to show custom Shopify theme development plus a small
 serverless-style backend integration, not just a themed storefront.
 
-**Live demo:** _add your dev store preview link here once deployed_
-**Recommender API:** _add your Render URL here once deployed_
+**Live demo:** https://hearth-coffee-demo.myshopify.com (password-protected — this is a Shopify Partner development store, which cannot be made public without converting to a paid live store; password: `shopifyCoffee`)
+**Recommender API:** https://shopify-hearth-coffee.onrender.com (free Render tier — the first request after idling can take up to ~30s to wake up)
 
 ## What this is
 
