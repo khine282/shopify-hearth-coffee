@@ -84,7 +84,7 @@
         "heading": "Find your roast in 3 questions",
         "subheading": "A tiny serverless quiz picks coffees from our shop that match your taste.",
         "heading_size": "h1",
-        "api_url": "https://your-render-app.onrender.com/recommend",
+        "api_url": "https://shopify-hearth-coffee.onrender.com/recommend",
         "color_scheme": "scheme-2"
       }
     },
