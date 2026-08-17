@@ -17,7 +17,7 @@
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": true,
             "button_label_2": "Find your roast",
-            "button_link_2": "#RoastQuiz-quiz",
+            "button_link_2": "#find-your-roast",
             "button_style_secondary_2": false
           }
         }
