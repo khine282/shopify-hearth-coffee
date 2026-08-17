@@ -1,0 +1,93 @@
+.roast-quiz {
+  padding: 4rem 0;
+}
+
+.roast-quiz__inner {
+  max-width: 720px;
+}
+
+.roast-quiz__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.roast-quiz__subheading {
+  opacity: 0.75;
+  margin-top: 0.5rem;
+}
+
+.roast-quiz__form {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.roast-quiz__question legend {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.roast-quiz__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.roast-quiz__options label {
+  border: 1px solid rgba(var(--color-foreground), 0.3);
+  border-radius: var(--buttons-radius, 4px);
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.roast-quiz__options input {
+  margin: 0;
+}
+
+.roast-quiz__submit {
+  justify-self: start;
+  margin-top: 0.5rem;
+}
+
+.roast-quiz__results {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.roast-quiz__results[hidden] {
+  display: none;
+}
+
+.roast-quiz__status {
+  grid-column: 1 / -1;
+  text-align: center;
+  opacity: 0.75;
+  font-size: 1.4rem;
+}
+
+.roast-quiz__result-card {
+  text-align: center;
+}
+
+.roast-quiz__result-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.roast-quiz__result-card h3 {
+  font-size: 1.6rem;
+  margin: 0 0 0.25rem;
+}
+
+.roast-quiz__result-card p {
+  margin: 0 0 0.5rem;
+  opacity: 0.8;
+}

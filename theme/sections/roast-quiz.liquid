@@ -1,0 +1,97 @@
+{{ 'component-roast-quiz.css' | asset_url | stylesheet_tag }}
+
+<div class="roast-quiz color-{{ section.settings.color_scheme }} gradient" id="RoastQuiz-{{ section.id }}">
+  <div class="roast-quiz__inner page-width">
+    <div class="roast-quiz__header">
+      <h2 class="roast-quiz__heading {{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
+      {%- if section.settings.subheading != blank -%}
+        <p class="roast-quiz__subheading">{{ section.settings.subheading }}</p>
+      {%- endif -%}
+    </div>
+
+    <form class="roast-quiz__form" data-roast-quiz-form data-api-url="{{ section.settings.api_url }}">
+      <fieldset class="roast-quiz__question">
+        <legend>1. How do you like your coffee to taste?</legend>
+        <div class="roast-quiz__options">
+          <label><input type="radio" name="flavor" value="fruity" checked> Bright &amp; fruity</label>
+          <label><input type="radio" name="flavor" value="chocolatey"> Chocolatey &amp; nutty</label>
+          <label><input type="radio" name="flavor" value="bold"> Bold &amp; smoky</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="roast-quiz__question">
+        <legend>2. How strong should it hit?</legend>
+        <div class="roast-quiz__options">
+          <label><input type="radio" name="strength" value="light" checked> Light roast</label>
+          <label><input type="radio" name="strength" value="medium"> Medium roast</label>
+          <label><input type="radio" name="strength" value="dark"> Dark roast</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="roast-quiz__question">
+        <legend>3. Caffeine preference?</legend>
+        <div class="roast-quiz__options">
+          <label><input type="radio" name="caffeine" value="regular" checked> Regular</label>
+          <label><input type="radio" name="caffeine" value="decaf"> Decaf</label>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="button roast-quiz__submit">Find my roast</button>
+    </form>
+
+    <div class="roast-quiz__results" data-roast-quiz-results hidden aria-live="polite"></div>
+  </div>
+</div>
+
+<script src="{{ 'roast-quiz.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "Find your roast (quiz)",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Find your roast in 3 questions"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "A tiny serverless quiz picks 3 coffees from our shop that match your taste."
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "h3", "label": "Small" },
+        { "value": "h2", "label": "Medium" },
+        { "value": "h1", "label": "Large" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "text",
+      "id": "api_url",
+      "label": "Recommender API URL",
+      "info": "Base URL of the Render-hosted recommender API, e.g. https://hearth-recommender.onrender.com/recommend",
+      "default": "https://your-render-app.onrender.com/recommend"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-2"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Find your roast (quiz)"
+    }
+  ]
+}
+{% endschema %}
